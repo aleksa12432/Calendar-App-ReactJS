@@ -15,9 +15,7 @@ export default function Calendar() {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex">
           <div class="flex items-center justify-center gap-16">
             <div class="flex-shrink-0">
-              <a href="#" class="text-gray-300 font-bold text-xl">
-                Logo
-              </a>
+             <img src={require("./img/logo.png")} className="w-10 h-15" />
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-20">
