@@ -20,7 +20,7 @@ export default function Calendar() {
               </a>
             </div>
             <div class="hidden md:block">
-              <div class="ml-10 flex items-baseline space-x-4">
+              <div class="ml-10 flex items-baseline space-x-20">
                 <a
                   href="#"
                   class="text-gray-400 hover:text-purple-500 px-3 py-2 rounded-md text-sm font-medium"
@@ -52,8 +52,8 @@ export default function Calendar() {
           </div>
         </div>
       </nav>
-      <div className="flex gap-10 sm:divide-x justify-center sm:w-1/2 mx-auto my-0  h-screen items-center sm:flex-col flex-col">
-        <div className="w-96 h-96 ">
+      <div className="flex gap-10 sm:divide-x justify-center mx-auto my-0  h-screen w-full items-center sm:flex-col flex-col">
+        <div className="w-7/12  ">
           <div className="flex justify-center items-center">
             <div
               className="flex gap-10 items-center mb-10
@@ -65,9 +65,14 @@ export default function Calendar() {
                   setToday(today.month(today.month() - 1));
                 }}
               />
-              <h1 className="select-none font-semibold">
-                {months[today.month()]}, {today.year()}
-              </h1>
+              <div className="flex flex-col text-center">
+                <h1 className="select-none font-semibold text-xl">
+                  {months[today.month()]}
+                </h1>
+                <h2 className="select-none font-extralight text-xs">
+                  {today.year()}
+                </h2>
+              </div>
               <GrFormNext
                 className="w-5 h-5 cursor-pointer hover:scale-105 transition-all"
                 onClick={() => {
@@ -81,7 +86,7 @@ export default function Calendar() {
               return (
                 <h1
                   key={index}
-                  className="text-sm text-center h-14 w-14 grid place-content-center text-gray-500 select-none"
+                  className="text-sm text-center h-14  grid place-content-center text-gray-500 select-none"
                 >
                   {day}
                 </h1>
@@ -103,9 +108,9 @@ export default function Calendar() {
                         today ? "bg-purple-600 text-white" : "",
                         selectDate.toDate().toDateString() ===
                           date.toDate().toDateString()
-                          ? "bg-purple-900 text-white"
+                          ? "bg-purple-700 text-white"
                           : "",
-                        "h-10 w-10 rounded-full grid place-content-center hover:bg-purple-600 hover:text-white transition-all cursor-pointer select-none"
+                        "h-10 w-10 rounded-md grid place-content-center hover:bg-purple-600 hover:text-white transition-all cursor-pointer select-none"
                       )}
                       onClick={() => {
                         setSelectDate(date);
@@ -117,6 +122,41 @@ export default function Calendar() {
                 );
               }
             )}
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 flex flex-col gap-4 mb-10">
+        <div class="card">
+          <div class="m-4">
+            <div class="badge ">
+              <span>10:00-13:00</span>
+            </div>
+            <span class="font-bold">Osmisli dizajn za USP</span>
+            <span class="block text-gray-400 text-sm font-extralight">
+              Kreni od ikonice aplikacije
+            </span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="m-4">
+            <div class="badge ">
+              <span>14:00-15:00</span>
+            </div>
+            <span class="font-bold">Odradi Frontend</span>
+            <span class="block text-gray-400 text-sm font-extralight">
+              Definisi probleme i moguca resenja...
+            </span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="m-4">
+            <div class="badge ">
+              <span>19:00-20:00</span>
+            </div>
+            <span class="font-bold">Zapisi beleske</span>
+            <span class="block text-gray-400 text-sm font-extralight">
+              Podeli beleske sa clanovima tima
+            </span>
           </div>
         </div>
       </div>
