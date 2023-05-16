@@ -5,7 +5,7 @@ import cn from "./util/cn";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 
 export default function Calendar() {
-  const days = ["S", "M", "T", "W", "T", "F", "S"];
+   const days = ["Ned", "Pon", "Uto", "Sre", "Cet", "Pet", "Sub"];
   const currentDate = dayjs();
   const [today, setToday] = useState(currentDate);
   const [selectDate, setSelectDate] = useState(currentDate);
