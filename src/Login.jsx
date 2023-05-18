@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
@@ -28,10 +29,16 @@ export default function Login() {
             </p>
             <a href="/">Forgot Password</a>
           </div>
-          <button className="w-full my-5 py-2 bg-purple-500 shadow-lg shadow-purple-500/50 hover:shadow-purple-500/40 text-white font-semibold rounded-lg">
-            SIGN IN
-          </button>
-          <p className="text-center">Don't have an account yet? Sign Up!</p>
+          <Link to="/calendar">
+            <button className="w-full my-5 py-2 bg-purple-500 shadow-lg shadow-purple-500/50 hover:shadow-purple-500/40 text-white font-semibold rounded-lg">
+              SIGN IN
+            </button>
+          </Link>
+          <div className="flex justify-center ">
+            <Link to="/register" className=" underline">
+              Don't have an account yet? Sign Up!
+            </Link>
+          </div>
         </form>
       </div>
     </div>
