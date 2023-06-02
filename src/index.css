@@ -8,55 +8,6 @@
 .badge {
   @apply top-0 ml-2 p-2 mt-2 text-gray-400   text-xs uppercase font-bold rounded-full;
 }
-
-.post-name-container {
-  padding: 2rem 1rem;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  background-color: #fff;
-  width: 50%;
-  border-radius: 1rem;
-  @apply rounded-2xl bg-white border-gray-200 border-y border-x shadow-2xl overflow-hidden;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  top: 10%;
-  bottom: 0;
-}
-.post-name-container #post-name,
-#post-time {
-  padding: 1rem;
-  text-transform: none;
-  color: #333;
-  font-size: 1rem;
-
-  -ms-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  @apply border-gray-200 border-y border-x   overflow-hidden;
-}
-#post-date,
-#post-name {
-  width: 60%;
-}
-#post-time {
-  width: 30%;
-}
-
-#post-date,
-#post-name,
-#post-time {
-  -ms-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  border-radius: 0.5rem;
-  @apply border-gray-200 border-y border-x   overflow-hidden;
-}
-
 .post-name-container #post-info {
   height: 10rem;
   width: 96%;
@@ -68,5 +19,4 @@ h3 {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
 }

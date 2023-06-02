@@ -4,8 +4,6 @@ import Login from "./Login";
 import Register from "./Register";
 import Calendar from "./Calendar";
 
-import App from "./App";
-
 function RouterPage() {
   return (
     <Router>
